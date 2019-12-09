@@ -94,6 +94,18 @@ public class StringUtil {
 		return false;
 	}
 
+	// 校验是否是手机号
+	public static boolean judgeTelephoneIsOk(String str) {
+		// 如果不为空则进行手机号判断
+		if (hasText(str)) {
+			// 手机号的规则
+			String regex = "1[3|4|5|6|7|8|9]\\d{9}";
+			// 根据规则匹配
+			return str.matches(regex);
+		}
+		return false;
+	}
+
 	// 是否是邮箱
 	public static boolean isEmail(String str) {
 
