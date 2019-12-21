@@ -1,6 +1,7 @@
 package com.zhaoya.common.untils;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
@@ -8,7 +9,27 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringUtil {
+	// 校验传入的参数是否为url
+	public static boolean isHttpUrl(String param) {
+		URL url;
+		try {
+			url = new URL(param);
+			url.openStream();
+			return true;
+		} catch (Exception e1) {
+			System.out.println("连接打不开!");
 
+		}
+		return false;
+
+	}
+
+	public static void main(String[] args) {
+		boolean b=StringUtil.isHttpUrl("http://www.baidu.com");
+		//boolean b=StringUtil.isHttpUrl("dsavfad");
+		System.out.println(b);
+	}
+	
 	// 方法1：判断源字符串是否有值，空引号(空白字符串)也算没值 (5分)
 	public static boolean hasLength(String src) {
 		return src != null && src.length() > 0;
