@@ -25,7 +25,7 @@ public class StringUtil {
 	}
 
 	public static void main(String[] args) {
-		boolean b=StringUtil.isHttpUrl("http://www.baidu.com");
+		boolean b=StringUtil.isHttpUrl("http://localhost/complain?id=22");
 		//boolean b=StringUtil.isHttpUrl("dsavfad");
 		System.out.println(b);
 	}
