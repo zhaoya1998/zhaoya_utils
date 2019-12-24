@@ -27,8 +27,8 @@ public class DistanceUtil {
 	}
 
 	public static void main(String[] args) {
-
+        
 		double d = getDistance(116.425249, 39.914504, 116.382001, 39.913329);
-		System.out.println("ä¸¤ç‚¹çš„è·ç¦?:" + d + "ç±?");
+		System.out.println("两地的距离是" + d+"m");
 	}
 }
