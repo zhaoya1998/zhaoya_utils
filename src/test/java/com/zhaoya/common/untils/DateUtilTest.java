@@ -1,6 +1,5 @@
 package com.zhaoya.common.untils;
 
-import static org.junit.Assert.fail;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -10,6 +9,15 @@ import org.junit.Test;
 
 public class DateUtilTest {
 
+	@Test
+	public void testSubDate() {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date = DateUtil.subDate(new Date());
+		String format = df.format(date);
+		System.out.println(format);
+		
+	}
+	
 	@Test
 	public void testGetMonthEnd() {
 		Calendar c = Calendar.getInstance();
@@ -39,14 +47,5 @@ public class DateUtilTest {
 		System.out.println(i);
 	}
 
-	@Test
-	public void testRandom() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testMain() {
-		fail("Not yet implemented");
-	}
 
 }

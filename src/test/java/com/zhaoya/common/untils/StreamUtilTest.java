@@ -6,9 +6,5 @@ import org.junit.Test;
 
 public class StreamUtilTest {
 
-	@Test
-	public void testRead() {
-		fail("Not yet implemented");
-	}
 
 }
